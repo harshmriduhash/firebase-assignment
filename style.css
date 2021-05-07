@@ -1,0 +1,214 @@
+
+
+#muteButton {
+	background: none;
+	padding: 0px;
+	margin: 0px;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	border: none;
+}
+#muteButton:active {
+	border: 0px;
+	outline: 0px;
+}
+
+#mute{
+	width: 50px;
+	height: auto;
+}
+
+#timerDisplay {
+	height: 50px;
+	width: 50px;
+	color: blue;
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 36px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	border: blue 6px solid;
+	border-radius: 25px;
+}
+
+#cirnoClickGif {
+	max-width: 100%;
+	height: auto;
+	filter: brightness(50%);
+	-webkit-transition : -webkit-filter 500ms linear
+}
+
+#clickCountDisplay, #enemyDisplay, #sessionHighScore {
+	text-align: center;
+	color: blue;
+	font-size: 30px;
+	font-weight: 900;
+	line-height: 36px;	
+}
+
+#enemyDisplay {
+	font-size: 30px;
+	color: red;
+}
+/*
+#clickCountP2 {
+	text-align: center;
+	color: blue;
+	font-size: 30px;
+	font-weight: 900;
+	line-height: 36px;	
+}*/
+
+#cirnoClickOverlay {
+	text-align: center;
+	vertical-align: center;
+	font-size: 30px;
+	color: white;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 10%;
+    width: 50%;
+    margin: -5% 0 0 -25%;
+}
+
+#opponentScore {
+	font-size: 20px;
+	color: white;
+}
+
+.disable-select {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+
+.punch1 {
+	width: 200px;
+	height: auto;
+	pointer-events: none;
+	position: fixed;
+}
+
+.explosionStyle {
+	height: 125vh;
+	width: auto;
+	pointer-events: none;
+	position: fixed;
+	bottom: 0;
+	z-index: 999;
+}
+
+
+@media (max-width: 1000000px) {
+	.explosionStyle{
+		left:20%;
+	}
+}
+
+@media (max-width: 1500px) {
+	.explosionStyle{
+		left:5%;
+	}
+}
+
+@media (max-width: 1000px) {
+	.explosionStyle{
+		left:-15%;
+	}
+}
+
+@media (max-width: 750px) {
+	.explosionStyle{
+		left:-20%;
+	}
+}
+
+@media (max-width: 600px) {
+	.explosionStyle{
+		left:-30%;
+	}
+}
+
+
+#name-input {
+	text-align: center;
+}
+
+#formStyle {
+	width: 30%;
+	position: fixed;
+	bottom: 0px;
+	left: 35%;
+	background-color: blue;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+tr, th {
+	text-align: left;
+	padding: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+td, th {
+	padding-left: 20px;
+	border-bottom: solid 1px white;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+thead {
+	margin: 10px;
+}
+
+#tableStyle {
+	width: 30%;
+	position: fixed;
+	bottom: -310px;
+	left: 35%;
+	background-color: blue;
+	color: white;
+	padding-top: 10px;
+	border-radius: 5px;
+	transition: bottom ease 0.5s;
+	/*visibility: hidden;*/
+}
+
+#tableStyle:hover {
+	bottom: 0px;
+}
+
+.topPadding {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-size: 15px;
+	border-bottom: solid 1px white;
+}
+
+.alignRight {
+	text-align: right;
+	padding-right: 20px;
+}
+@media (max-width: 1000px){
+	#formStyle, #tableStyle {
+		width: 66.666667%;
+		left: 16.666667%;
+	}
+}
+
+#submitName {
+	width: 100%;
+}
+
+p{
+	text-align: center;
+}

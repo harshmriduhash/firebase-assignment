@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="animate.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css">
+
+
+</style>
+</head>
+<audio id="backAudio" src="audio/easy.mp3" loop></audio>
+<body>
+
+<div class="container">
+<div id="row">
+	<div class="col-xs-3"></div>
+	<div class="col-xs-6 disable-select">
+		<div id="timerDisplay">9</div>
+	</div>
+	<div class="col-xs-3"></div>
+</div>
+</div>
+
+<div class="container">
+<div id="row">
+	<div class="col-xs-2 col-md-3"></div>
+	<div id="cirnoClick" class="col-xs-8 col-md-6 disable-select">
+		<img id="cirnoClickGif" src="images/cirno.gif">
+		<div id="cirnoClickOverlay">
+			<div class="animated bounceIn">Click to Start!</div>
+		</div>
+	</div>
+	<div class="col-xs-2 col-md-3"></div>
+</div>
+</div>
+
+<div class="container">
+	<div id="row">
+		<div class="col-xs-3"></div>
+		<div id="clickCountDisplay" class="col-xs-6 disable-select">Clicks: 0</div>
+		<div class="col-xs-3"></div>
+	</div>
+</div>
+
+<div class="container">
+	<div id="row">
+		<div class="col-xs-3"></div>
+		<div id="enemyDisplay" class="col-xs-6 disable-select">Enemy: 0</div>
+		<div class="col-xs-3"></div>
+	</div>
+</div>
+
+<div class="container">
+	<div id="row">
+		<div class="col-xs-3"></div>
+		<div id="sessionHighScore" class="col-xs-6 disable-select">Your High Score: 0</div>
+		<div class="col-xs-3"></div>
+	</div>
+</div>
+
+<button id="muteButton">
+	<img id="mute" src="images/unmuted.png"></img>
+</button>
+
+<div id="appendPunch1"></div>
+<div id="appendPunch2"></div>
+<div id="appendPunch3"></div>
+<div id="appendPunch4"></div>
+<div id="appendPunch5"></div>
+
+<form id="formStyle">
+	<p><strong>Input Name For High Scores</strong></p>
+	<div class="input">
+	  <input type="text" id="name-input" class="form-control" placeholder="Name" aria-describedby="basic-addon1" maxlength="10" autocomplete="off"/>
+	</div>
+	<input type="submit" class="btn btn-primary" id="submitName">
+</form> 
+
+<table id="tableStyle">
+	<thead>
+		<tr>
+			<th class="topPadding"><strong>Clickers</strong></th>
+			<th class="alignRight topPadding"><strong>Clicks</strong></th>
+		</tr>
+	</thead>
+	<tbody id="tableAppend">
+<!--     	<tr>
+    		<td><strong>Jon</strong></td>
+    		<td class="alignRight">254</td>
+    	</tr>
+    	<tr>
+    		<td><strong>Nameless</strong></td>
+    		<td class="alignRight">221</td>
+    	</tr>
+    	<tr>
+    		<td><strong>George</strong></td>
+    		<td class="alignRight">198</td>
+    	</tr> -->
+    </tbody>
+</table>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+var config = {
+	apiKey: "AIzaSyDvbTen5yPtkZn22zDm_SxPzaY0ZDkFSqA",
+	authDomain: "cirno-clicker.firebaseapp.com",
+	databaseURL: "https://cirno-clicker.firebaseio.com",
+	projectId: "cirno-clicker",
+	storageBucket: "",
+	messagingSenderId: "296227686054"
+};
+firebase.initializeApp(config);
+
+// var dbHighScores = firebase.database().ref('/highScores');
+// var name = 'Nameless';
+// $('#tableStyle').toggle();
+
+// $('#submitName').click(function(){
+// 	event.preventDefault();
+// 	name = document.getElementById('name-input').value;
+// 	$('#sessionHighScore').text(name+': '+sessionHighScore);
+// 	$('#formStyle').hide();
+// 	$('#tableStyle').toggle();
+// 	if(sessionHighScore>0){
+// 		dbHighScores.push({ name: name , score: sessionHighScore });
+// 	}
+// });
+
+// dbHighScores.orderByChild("score").limitToLast(10).on('child_added', snap=>{
+// 	$('#tableAppend').prepend('<tr><td><strong>'+snap.val().name+'</strong></td><td class="alignRight">'+snap.val().score+'</td></tr>')
+// 	console.log(snap.val());
+// });
+
+</script>
+<script src="script.js"></script>
+</html>
